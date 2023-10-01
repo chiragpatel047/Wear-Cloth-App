@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="7dp"
+        app:cardBackgroundColor="@color/second_backgroud"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="0dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <ImageView
+                android:id="@+id/item_image"
+                android:layout_width="130dp"
+                android:layout_height="0dp"
+                android:background="@color/white"
+                android:scaleType="fitCenter"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/temp_item_demo_one" />
+
+            <ImageView
+                android:id="@+id/imageView15"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="15dp"
+                android:padding="8dp"
+                android:rotation="270"
+                app:layout_constraintBottom_toBottomOf="@+id/item_price"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/item_price"
+                app:srcCompat="@drawable/backarrow"
+                app:tint="@color/second_font_color" />
+
+            <TextView
+                android:id="@+id/item_text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="15dp"
+                android:ellipsize="marquee"
+                android:fontFamily="@font/poppins_medium"
+                android:singleLine="true"
+                android:text="Evening Dress"
+                android:textColor="@color/font_color"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/item_image"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/item_desc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="marquee"
+                android:fontFamily="@font/poppins_medium"
+                android:singleLine="true"
+                android:text="Talpot dress black"
+                android:textColor="@color/second_font_color"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="@+id/item_text"
+                app:layout_constraintTop_toBottomOf="@+id/item_text" />
+
+            <TextView
+                android:id="@+id/item_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/poppins_medium"
+                android:paddingLeft="3dp"
+                android:paddingRight="3dp"
+                android:paddingBottom="15dp"
+                android:text="My reviews "
+                android:textColor="@color/font_color"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="@+id/item_desc"
+                app:layout_constraintTop_toBottomOf="@+id/item_desc" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.cardview.widget.CardView>
+</layout>

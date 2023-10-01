@@ -1,0 +1,494 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/main_background"
+        tools:context=".Address">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/main_background"
+            android:padding="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/textView14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_medium"
+                android:text="Shinpping address"
+                android:textColor="@color/font_color"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <ImageView
+                android:id="@+id/img_back"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:padding="5dp"
+                android:rotation="90"
+                android:src="@drawable/backarrow"
+                app:layout_constraintBottom_toBottomOf="@+id/textView14"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/textView14"
+                app:tint="@color/font_color" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ScrollView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/view_add_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="15dp"
+                    android:background="@drawable/edittextback"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView">
+
+                    <ImageView
+                        android:id="@+id/name_close"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="16dp"
+                        android:padding="3dp"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toBottomOf="@+id/add_name"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/add_name"
+                        app:srcCompat="@drawable/close"
+                        app:tint="@color/main_red" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/add_name"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:hint="Full name"
+                        android:textColorHint="@color/second_font_color"
+                        app:boxBackgroundMode="none"
+                        app:hintTextColor="@color/second_font_color"
+                        app:layout_constraintEnd_toStartOf="@+id/name_close"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@null"
+                            android:backgroundTint="@null"
+                            android:fontFamily="@font/poppins_medium"
+                            android:inputType="textShortMessage"
+                            android:paddingTop="16dp"
+                            android:paddingBottom="20dp"
+                            android:singleLine="true"
+                            android:textColor="@color/font_color">
+
+                        </com.google.android.material.textfield.TextInputEditText>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="Can't be empty"
+                    android:textColor="@color/main_red"
+                    android:textSize="12sp"
+                    android:visibility="gone" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/view_add_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="15dp"
+                    android:background="@drawable/edittextback"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView">
+
+                    <ImageView
+                        android:id="@+id/address_close"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="16dp"
+                        android:padding="3dp"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toBottomOf="@+id/add_address"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/add_address"
+                        app:srcCompat="@drawable/close"
+                        app:tint="@color/main_red" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/add_address"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:hint="Address"
+                        android:textColorHint="@color/second_font_color"
+                        app:boxBackgroundMode="none"
+                        app:hintTextColor="@color/second_font_color"
+                        app:layout_constraintEnd_toStartOf="@+id/address_close"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@null"
+                            android:backgroundTint="@null"
+                            android:fontFamily="@font/poppins_medium"
+                            android:inputType="textShortMessage"
+                            android:paddingTop="16dp"
+                            android:paddingBottom="20dp"
+                            android:singleLine="true"
+                            android:textColor="@color/font_color">
+
+                        </com.google.android.material.textfield.TextInputEditText>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="Can't be empty"
+                    android:textColor="@color/main_red"
+                    android:textSize="12sp"
+                    android:visibility="gone" />
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/view_add_city"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="15dp"
+                    android:background="@drawable/edittextback"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView">
+
+                    <ImageView
+                        android:id="@+id/city_close"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="16dp"
+                        android:padding="3dp"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toBottomOf="@+id/add_city"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/add_city"
+                        app:srcCompat="@drawable/close"
+                        app:tint="@color/main_red" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/add_city"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:hint="City"
+                        android:textColorHint="@color/second_font_color"
+                        app:boxBackgroundMode="none"
+                        app:hintTextColor="@color/second_font_color"
+                        app:layout_constraintEnd_toStartOf="@+id/city_close"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@null"
+                            android:backgroundTint="@null"
+                            android:fontFamily="@font/poppins_medium"
+                            android:inputType="textShortMessage"
+                            android:paddingTop="16dp"
+                            android:paddingBottom="20dp"
+                            android:singleLine="true"
+                            android:textColor="@color/font_color">
+
+                        </com.google.android.material.textfield.TextInputEditText>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="Can't be empty"
+                    android:textColor="@color/main_red"
+                    android:textSize="12sp"
+                    android:visibility="gone" />
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/view_add_state"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="15dp"
+                    android:background="@drawable/edittextback"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView">
+
+                    <ImageView
+                        android:id="@+id/state_close"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="16dp"
+                        android:padding="3dp"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toBottomOf="@+id/add_state"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/add_state"
+                        app:srcCompat="@drawable/close"
+                        app:tint="@color/main_red" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/add_state"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:hint="State"
+                        android:textColorHint="@color/second_font_color"
+                        app:boxBackgroundMode="none"
+                        app:hintTextColor="@color/second_font_color"
+                        app:layout_constraintEnd_toStartOf="@+id/state_close"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@null"
+                            android:backgroundTint="@null"
+                            android:fontFamily="@font/poppins_medium"
+                            android:inputType="textShortMessage"
+                            android:paddingTop="16dp"
+                            android:paddingBottom="20dp"
+                            android:singleLine="true"
+                            android:textColor="@color/font_color">
+
+                        </com.google.android.material.textfield.TextInputEditText>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="Can't be empty"
+                    android:textColor="@color/main_red"
+                    android:textSize="12sp"
+                    android:visibility="gone" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/view_add_zip"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="15dp"
+                    android:background="@drawable/edittextback"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView">
+
+                    <ImageView
+                        android:id="@+id/zip_close"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="16dp"
+                        android:padding="3dp"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toBottomOf="@+id/add_zip"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/add_zip"
+                        app:srcCompat="@drawable/close"
+                        app:tint="@color/main_red" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/add_zip"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:hint="Zip Code"
+                        android:textColorHint="@color/second_font_color"
+                        app:boxBackgroundMode="none"
+                        app:hintTextColor="@color/second_font_color"
+                        app:layout_constraintEnd_toStartOf="@+id/zip_close"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@null"
+                            android:backgroundTint="@null"
+                            android:fontFamily="@font/poppins_medium"
+                            android:inputType="number"
+                            android:paddingTop="16dp"
+                            android:paddingBottom="20dp"
+                            android:singleLine="true"
+                            android:textColor="@color/font_color">
+
+                        </com.google.android.material.textfield.TextInputEditText>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="Can't be empty"
+                    android:textColor="@color/main_red"
+                    android:textSize="12sp"
+                    android:visibility="gone" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/view_add_country"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="15dp"
+                    android:background="@drawable/edittextback"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView">
+
+                    <ImageView
+                        android:id="@+id/country_close"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="16dp"
+                        android:padding="3dp"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toBottomOf="@+id/add_phone_no"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/add_phone_no"
+                        app:srcCompat="@drawable/close"
+                        app:tint="@color/main_red" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/add_phone_no"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:hint="Phone no"
+                        android:textColorHint="@color/second_font_color"
+                        app:boxBackgroundMode="none"
+                        app:hintTextColor="@color/second_font_color"
+                        app:layout_constraintEnd_toStartOf="@+id/country_close"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@null"
+                            android:backgroundTint="@null"
+                            android:fontFamily="@font/poppins_medium"
+                            android:inputType="number"
+                            android:paddingTop="16dp"
+                            android:paddingBottom="20dp"
+                            android:singleLine="true"
+                            android:textColor="@color/font_color">
+
+                        </com.google.android.material.textfield.TextInputEditText>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="Can't be empty"
+                    android:textColor="@color/main_red"
+                    android:textSize="12sp"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/save_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginEnd="15dp"
+                    android:background="@drawable/red_button"
+                    android:elevation="5dp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:gravity="center"
+                    android:padding="15dp"
+                    android:text="NEXT"
+                    android:textColor="#F5F5F5"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/already_account" />
+
+                <TextView
+                    android:id="@+id/textView35"
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"
+                    android:layout_marginTop="10dp" />
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

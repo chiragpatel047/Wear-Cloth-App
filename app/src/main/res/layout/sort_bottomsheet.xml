@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bottomsheet_back"
+        android:paddingBottom="15dp">
+
+        <TextView
+            android:id="@+id/textView17"
+            android:layout_width="80dp"
+            android:layout_height="8dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/bottomsheet_handle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView18"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/poppins_medium"
+            android:text="Sort by"
+            android:textColor="@color/font_color"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView17" />
+
+        <RadioGroup
+            android:id="@+id/sort_radio_group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView18">
+
+            <RadioButton
+                android:id="@+id/radio_populer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/radio_selector"
+                android:button="@android:color/transparent"
+                android:fontFamily="@font/poppins_medium"
+                android:padding="15dp"
+                android:text="Popular"
+                android:textSize="16sp"></RadioButton>
+
+
+            <RadioButton
+                android:id="@+id/radio_new"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/radio_selector"
+                android:button="@android:color/transparent"
+                android:fontFamily="@font/poppins_medium"
+                android:padding="15dp"
+                android:text="Newest"
+                android:textSize="16sp"></RadioButton>
+
+
+            <RadioButton
+                android:id="@+id/radio_review"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/radio_selector"
+                android:button="@android:color/transparent"
+                android:fontFamily="@font/poppins_medium"
+                android:padding="15dp"
+                android:text="Customer review"
+                android:textSize="16sp"></RadioButton>
+
+
+            <RadioButton
+                android:id="@+id/radio_lowtohigh"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/radio_selector"
+                android:button="@android:color/transparent"
+                android:fontFamily="@font/poppins_medium"
+                android:padding="15dp"
+                android:text="Price : lowest to high"
+                android:textSize="16sp"></RadioButton>
+
+
+            <RadioButton
+                android:id="@+id/radio_hightolow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/radio_selector"
+                android:button="@android:color/transparent"
+                android:fontFamily="@font/poppins_medium"
+                android:padding="15dp"
+                android:text="Price : Highest to low"
+                android:textSize="16sp"></RadioButton>
+
+
+        </RadioGroup>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

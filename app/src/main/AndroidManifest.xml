@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE"/>
+
+    <application
+        android:name=".MainApplication"
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/wear_app_icon"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Febric"
+        tools:targetApi="31">
+        <service android:name=".Services.FirebaseNotificationService"
+            android:permission="com.google.android.c2dm.permission.SEND"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
+            </intent-filter>
+        </service>
+        <activity
+            android:name=".ProductDetails"
+            android:exported="false" />
+        <activity
+            android:name=".Notifcations"
+            android:exported="false" />
+        <activity
+            android:name=".Settings"
+            android:exported="false" />
+        <activity
+            android:name=".MyReviewItems"
+            android:exported="false" />
+        <activity
+            android:name=".ShippingAddress"
+            android:exported="false" />
+        <activity
+            android:name=".MyOrders"
+            android:exported="false" />
+        <activity
+            android:name=".OrderDone"
+            android:exported="false" />
+        <activity
+            android:name=".Preview"
+            android:exported="false" />
+        <activity
+            android:name=".Address"
+            android:exported="false" />
+        <activity
+            android:name=".Ratings"
+            android:exported="false" />
+        <activity
+            android:name=".FullProduct"
+            android:exported="false" />
+        <activity
+            android:name=".Filter"
+            android:exported="false" />
+        <activity
+            android:name=".Products"
+            android:exported="false" />
+        <activity
+            android:name=".SubCategory"
+            android:exported="false" />
+        <activity
+            android:name=".HomeScreen"
+            android:exported="false" />
+        <activity
+            android:name=".ForgetPassScreen"
+            android:exported="false" />
+        <activity
+            android:name=".LoginScreen"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="com.razorpay.ApiKey"
+            android:value="rzp_live_ILgsfZCZoFIKMb" />
+    </application>
+
+</manifest>

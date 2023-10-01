@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/main_background"
+        tools:context=".Filter">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/main_background"
+            android:padding="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/textView14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_medium"
+                android:text="Filters"
+                android:textColor="@color/font_color"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <ImageView
+                android:id="@+id/imageView8"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:padding="5dp"
+                android:rotation="90"
+                android:src="@drawable/backarrow"
+                app:layout_constraintBottom_toBottomOf="@+id/textView14"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/textView14"
+                app:tint="@color/font_color" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <com.google.android.material.slider.RangeSlider
+            android:id="@+id/range_seek_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="-15dp"
+            android:layout_marginEnd="15dp"
+            android:valueFrom="99.0"
+            android:valueTo="10000.0"
+            app:tickColor="@color/main_red"
+            app:tickColorActive="@color/main_red"
+            app:tickColorInactive="@color/main_red"
+            app:thumbColor="@color/main_red"
+            app:haloColor="@color/main_red"
+            app:thumbStrokeColor="@color/main_red"
+            app:trackColorActive="@color/main_red"
+            app:trackColorInactive="@color/second_font_color"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/full_name"
+            app:values="@array/initial_slider_values" />
+
+        <TextView
+            android:id="@+id/textView19"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/poppins_medium"
+            android:text="Price range "
+            android:textColor="@color/font_color"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
+
+        <TextView
+            android:id="@+id/textView24"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/poppins_medium"
+            android:text="Sizes"
+            android:textColor="@color/font_color"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/range_seek_bar" />
+
+        <TextView
+            android:id="@+id/textView25"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="35dp"
+            android:fontFamily="@font/poppins_medium"
+            android:text="Category"
+            android:textColor="@color/font_color"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout4" />
+
+        <TextView
+            android:id="@+id/full_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/poppins_medium"
+            android:text="99 $"
+            android:textColor="@color/font_color"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView19" />
+
+        <TextView
+            android:id="@+id/max_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="15dp"
+            android:fontFamily="@font/poppins_medium"
+            android:text="5000 $"
+            android:textColor="@color/font_color"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView19" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView24">
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/checkbox_selector"
+                android:button="@android:color/transparent"
+                android:fontFamily="@font/poppins_medium"
+                android:gravity="center"
+                android:paddingTop="2dp"
+                android:text="S"
+                android:textColor="@color/font_color"
+                android:textSize="16sp"></CheckBox>
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:background="@drawable/checkbox_selector"
+                android:button="@android:color/transparent"
+                android:fontFamily="@font/poppins_medium"
+                android:gravity="center"
+                android:paddingTop="2dp"
+                android:text="M"
+                android:textColor="@color/font_color"
+                android:textSize="16sp"></CheckBox>
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:background="@drawable/checkbox_selector"
+                android:button="@android:color/transparent"
+                android:fontFamily="@font/poppins_medium"
+                android:gravity="center"
+                android:paddingTop="2dp"
+                android:text="L"
+                android:textColor="@color/font_color"
+                android:textSize="16sp"></CheckBox>
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:background="@drawable/checkbox_selector"
+                android:button="@android:color/transparent"
+                android:fontFamily="@font/poppins_medium"
+                android:gravity="center"
+                android:paddingTop="2dp"
+                android:text="XL"
+                android:textColor="@color/font_color"
+                android:textSize="16sp"></CheckBox>
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:background="@drawable/checkbox_selector"
+                android:button="@android:color/transparent"
+                android:fontFamily="@font/poppins_medium"
+                android:gravity="center"
+                android:paddingTop="2dp"
+                android:text="XXL"
+                android:textColor="@color/font_color"
+                android:textSize="16sp"></CheckBox>
+
+        </LinearLayout>
+
+        <TableLayout
+            android:id="@+id/table_radButtons"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView25">
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <CheckBox
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="8dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/checkbox_selector"
+                        android:button="@android:color/transparent"
+                        android:fontFamily="@font/poppins_medium"
+                        android:gravity="center"
+                        android:paddingTop="2dp"
+                        android:text="All"
+                        android:textColor="@color/font_color"
+                        android:textSize="16sp">
+
+                    </CheckBox>
+
+                    <CheckBox
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="8dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/checkbox_selector"
+                        android:button="@android:color/transparent"
+                        android:fontFamily="@font/poppins_medium"
+                        android:gravity="center"
+                        android:paddingTop="2dp"
+                        android:text="Women"
+                        android:textColor="@color/font_color"
+                        android:textSize="16sp"></CheckBox>
+
+                    <CheckBox
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="8dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/checkbox_selector"
+                        android:button="@android:color/transparent"
+                        android:fontFamily="@font/poppins_medium"
+                        android:gravity="center"
+                        android:paddingTop="2dp"
+                        android:text="Men"
+                        android:textColor="@color/font_color"
+                        android:textSize="16sp"></CheckBox>
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="15dp">
+
+                    <CheckBox
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="8dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/checkbox_selector"
+                        android:button="@android:color/transparent"
+                        android:fontFamily="@font/poppins_medium"
+                        android:gravity="center"
+                        android:paddingTop="2dp"
+                        android:text="Boys"
+                        android:textColor="@color/font_color"
+                        android:textSize="16sp"></CheckBox>
+
+                    <CheckBox
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="8dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/checkbox_selector"
+                        android:button="@android:color/transparent"
+                        android:fontFamily="@font/poppins_medium"
+                        android:gravity="center"
+                        android:paddingTop="2dp"
+                        android:text="Girls"
+                        android:textColor="@color/font_color"
+                        android:textSize="16sp"></CheckBox>
+
+                </TableRow>
+            </RadioGroup>
+        </TableLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="50dp"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <TextView
+                android:id="@+id/filter_discard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="8dp"
+                android:layout_weight="1"
+                android:background="@drawable/discard_back"
+                android:fontFamily="@font/poppins_medium"
+                android:gravity="center"
+                android:padding="15dp"
+                android:text="Discard"
+                android:textColor="@color/font_color"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/filter_apply"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_weight="1"
+                android:background="@drawable/red_button"
+                android:fontFamily="@font/poppins_medium"
+                android:gravity="center"
+                android:padding="15dp"
+                android:text="Apply"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

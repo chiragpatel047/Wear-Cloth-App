@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:background="@color/main_background">
+
+        <TextView
+            android:id="@+id/item_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="-5dp"
+            android:ellipsize="marquee"
+            android:fontFamily="@font/poppins_medium"
+            android:singleLine="true"
+            android:text="Evening Dress"
+            android:textColor="@color/font_color"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/item_name" />
+
+        <TextView
+            android:id="@+id/item_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="3dp"
+            android:ellipsize="marquee"
+            android:fontFamily="@font/poppins_medium"
+            android:singleLine="true"
+            android:text="Dorothy prikins"
+            android:textColor="@color/second_font_color"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/item_rating" />
+
+        <TextView
+            android:id="@+id/item_old_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="-5dp"
+            android:fontFamily="@font/poppins_medium"
+            android:paddingLeft="3dp"
+            android:paddingRight="3dp"
+            android:text="15$"
+            android:textColor="@color/second_font_color"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/item_text" />
+
+        <TextView
+            android:id="@+id/item_new_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="-5dp"
+            android:fontFamily="@font/poppins_medium"
+            android:paddingLeft="3dp"
+            android:paddingRight="3dp"
+            android:text="10$"
+            android:textColor="@color/main_red"
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@+id/item_old_price"
+            app:layout_constraintTop_toBottomOf="@+id/item_text" />
+
+        <TextView
+            android:id="@+id/item_strike"
+            android:layout_width="0dp"
+            android:layout_height="2dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="-5dp"
+            android:layout_marginBottom="3dp"
+            android:background="@drawable/price_strike"
+            android:fontFamily="@font/poppins_medium"
+            android:textColor="@color/second_font_color"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/item_old_price"
+            app:layout_constraintEnd_toEndOf="@+id/item_old_price"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/item_text" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView"
+            android:layout_width="160dp"
+            android:layout_height="200dp"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="0dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/loading_anim4"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:lottie_autoPlay="true"
+                    app:lottie_loop="true"
+                    app:lottie_rawRes="@raw/img_loading">
+
+                </com.airbnb.lottie.LottieAnimationView>
+
+                <ImageView
+                    android:id="@+id/item_image"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:scaleType="fitCenter"
+                    android:visibility="visible"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/temp_item_demo_one" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+        <RatingBar
+            android:id="@+id/item_rating"
+            style="?android:attr/ratingBarStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="8dp"
+            android:progressTint="@color/rating_color"
+            android:progressBackgroundTint="@color/second_font_color"
+            android:rating="3.5"
+            android:secondaryProgressTint="@color/rating_color"
+            app:layout_constraintStart_toStartOf="@+id/cardView"
+            app:layout_constraintTop_toBottomOf="@+id/cardView">
+
+        </RatingBar>
+
+        <TextView
+            android:id="@+id/item_number_of_rating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="2dp"
+            android:fontFamily="@font/poppins_medium"
+            android:text="(10)"
+            android:textColor="@color/second_font_color"
+            android:textSize="9sp"
+            app:layout_constraintBottom_toBottomOf="@+id/item_rating"
+            app:layout_constraintStart_toEndOf="@+id/item_rating"
+            app:layout_constraintTop_toTopOf="@+id/item_rating" />
+
+        <ImageView
+            android:id="@+id/item_like"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="2dp"
+            android:layout_marginBottom="-15dp"
+            android:background="@drawable/like_back"
+            android:elevation="3dp"
+            android:padding="15dp"
+            app:layout_constraintBottom_toBottomOf="@+id/cardView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:srcCompat="@drawable/likeinactive"
+            app:tint="@color/second_font_color" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</layout>
