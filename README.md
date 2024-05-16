@@ -1,9 +1,6 @@
 <h1>App screenshots</h1>
 
 
-<img src="https://github.com/chiragpatel047/Wear-Cloth-App/assets/71206617/fd35d4a4-534a-4f96-8e5b-96c7fab981e4" width="250px">
-<img src="https://github.com/chiragpatel047/Wear-Cloth-App/assets/71206617/bb4486a4-f43a-4bf3-b09e-ebeb9a0aec25" width="250px">
-<img src="https://github.com/chiragpatel047/Wear-Cloth-App/assets/71206617/3a9967f8-a364-44e4-9daf-1980c9db33cc" width="250px">
 
 
 <img src="https://github.com/chiragpatel047/Wear-Cloth-App/assets/71206617/1395a720-51e7-45f9-948c-18a922c9d84f" width="250px">
@@ -40,3 +37,8 @@
 <img src="https://github.com/chiragpatel047/Wear-Cloth-App/assets/71206617/a3844934-75d6-442a-9a5f-f060dd8a3afa" width="250px">
 <img src="https://github.com/chiragpatel047/Wear-Cloth-App/assets/71206617/347a0bee-ab46-4779-bc4e-6624201be268" width="250px">
 <img src="https://github.com/chiragpatel047/Wear-Cloth-App/assets/71206617/7779fdcb-5b91-4ff1-990f-b29be421927c" width="250px">
+
+
+<img src="https://github.com/chiragpatel047/Wear-Cloth-App/assets/71206617/fd35d4a4-534a-4f96-8e5b-96c7fab981e4" width="250px">
+<img src="https://github.com/chiragpatel047/Wear-Cloth-App/assets/71206617/bb4486a4-f43a-4bf3-b09e-ebeb9a0aec25" width="250px">
+<img src="https://github.com/chiragpatel047/Wear-Cloth-App/assets/71206617/3a9967f8-a364-44e4-9daf-1980c9db33cc" width="250px">
