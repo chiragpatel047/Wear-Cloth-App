@@ -1,6 +1,10 @@
+<h1>Wear</h1>
+
+A clothing shopping app lets you browse, buy, and manage clothing purchases all from your phone. It offers features like easy navigation, product details, secure payment, and track your orders at your fingertips.
+
+<h3>Wear Admin (Admin App) :- https://github.com/chiragpatel047/Wear-Cloth-Admin-App.git </h3>
+
 <h1>App screenshots</h1>
-
-
 
 
 <img src="https://github.com/chiragpatel047/Wear-Cloth-App/assets/71206617/1395a720-51e7-45f9-948c-18a922c9d84f" width="250px">
